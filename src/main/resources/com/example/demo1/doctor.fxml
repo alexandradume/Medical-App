@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="245.0" prefWidth="707.0" style="-fx-background-color: #d5d0dd;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.DoctorController">
+<AnchorPane prefHeight="245.0" prefWidth="707.0" style="-fx-background-color: #d5d0dd;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.controllers.DoctorController">
    <children>
       <Label fx:id="label" layoutX="89.0" layoutY="30.0" prefHeight="30.0" prefWidth="169.0" text="  ">
          <font>

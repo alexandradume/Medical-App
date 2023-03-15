@@ -1,5 +1,6 @@
 package com.example.demo1;
 
+import com.example.demo1.controllers.HelloController;
 import com.example.demo1.repo.ClientDB;
 import com.example.demo1.repo.DateProgramariDB;
 import com.example.demo1.repo.DoctorDB;

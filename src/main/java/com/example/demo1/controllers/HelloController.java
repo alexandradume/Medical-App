@@ -1,5 +1,6 @@
-package com.example.demo1;
+package com.example.demo1.controllers;
 
+import com.example.demo1.HelloApplication;
 import com.example.demo1.repo.ClientDB;
 import com.example.demo1.repo.DateProgramariDB;
 import com.example.demo1.repo.DoctorDB;

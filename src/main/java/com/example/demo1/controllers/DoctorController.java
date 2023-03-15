@@ -1,5 +1,6 @@
-package com.example.demo1;
+package com.example.demo1.controllers;
 
+import com.example.demo1.HelloApplication;
 import com.example.demo1.domain.Programare;
 import com.example.demo1.service.Service;
 import javafx.collections.FXCollections;

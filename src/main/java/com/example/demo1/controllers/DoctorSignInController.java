@@ -1,4 +1,4 @@
-package com.example.demo1;
+package com.example.demo1.controllers;
 
 import com.example.demo1.service.Service;
 import javafx.collections.FXCollections;
@@ -9,11 +9,9 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class ClientSignInController {
-
+public class DoctorSignInController {
 
     Service service;
-
     @FXML
     private TextField usernameTF;
     @FXML
@@ -24,13 +22,18 @@ public class ClientSignInController {
     private ComboBox comboBox;
 
     @FXML
+    private ComboBox comboBox2;
+
+    @FXML
     private Label label;
 
     ObservableList<String> orase = FXCollections.observableArrayList("Brasov", "Cluj-Napoca","Bucuresti");
+    ObservableList<String> specializari = FXCollections.observableArrayList("dermatolog", "oftalmolog", "pediatru", "internist", "cardiolog", "urolog", "hematolog", "endocrinolog", "ginecolog");
 
     public void setService(Service service) {
         this.service = service;
         comboBox.setItems(orase);
+        comboBox2.setItems(specializari);
     }
 
     public void signIn(ActionEvent actionEvent) {
@@ -38,11 +41,13 @@ public class ClientSignInController {
         String username = usernameTF.getText();
         String password= parolaTF.getText();
         String city= (String) comboBox.getValue();
-        /*System.out.println(name);
+        String speciality = (String) comboBox2.getValue();
+        System.out.println(name);
         System.out.println(username);
         System.out.println(city);
-        System.out.println(password);*/
-        int truth = service.addClient(username,password,name,city);
+        System.out.println(password);
+        System.out.println(speciality);
+        int truth = service.addDoctor(username,password,name,city,speciality);
         if(truth == 0)
             label.setText("Successful sign up");
         if(truth == -1)
@@ -52,3 +57,4 @@ public class ClientSignInController {
 
     }
 }
+

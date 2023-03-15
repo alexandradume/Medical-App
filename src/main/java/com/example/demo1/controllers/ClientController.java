@@ -1,10 +1,7 @@
-package com.example.demo1;
+package com.example.demo1.controllers;
 
+import com.example.demo1.HelloApplication;
 import com.example.demo1.domain.Programare;
-import com.example.demo1.repo.ClientDB;
-import com.example.demo1.repo.DateProgramariDB;
-import com.example.demo1.repo.DoctorDB;
-import com.example.demo1.repo.ProgramareDB;
 import com.example.demo1.service.Service;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -20,7 +17,6 @@ import java.io.IOException;
 import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
