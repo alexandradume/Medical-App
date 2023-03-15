@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="245.0" prefWidth="437.0" style="-fx-background-color: #d5d0dd;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.GinecologieController">
+   <children>
+      <Text fill="#0d0000" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interne" wrappingWidth="123.00000000000011">
+         <font>
+            <Font name="Eras Bold ITC" size="16.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutX="7.0" layoutY="47.0" prefHeight="200.0" prefWidth="423.0" style="-fx-background-color: #c9c9c6;">
+         <children>
+            <Text layoutX="14.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicina internă este specialitatea care se ocupă cu diagnosticul, tratamentul și prevenirea bolilor care afectează unul sau mai multe organe interne. Boli diagnosticate de medicul internist : hipertenisune arterială, bronșită cronică, ulcer, infecții urinale, anemii, osteoporoză, diabet, leucemii, lupus" wrappingWidth="234.999969482422">
+               <font>
+                  <Font name="Ebrima" size="14.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="165.0" fitWidth="136.0" layoutX="273.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img_6.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

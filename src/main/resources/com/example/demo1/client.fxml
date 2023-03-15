@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="292.0" prefWidth="860.0" style="-fx-background-color: #d5d0dd;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.ClientController">
+   <children>
+      <Label fx:id="label" layoutX="89.0" layoutY="30.0" prefHeight="30.0" prefWidth="169.0" text="  ">
+         <font>
+            <Font name="Bookman Old Style Italic" size="13.0" />
+         </font>
+      </Label>
+      <Text layoutX="89.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profilul tau:" wrappingWidth="89.47003173828125">
+         <font>
+            <Font name="Eras Medium ITC" size="15.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="72.0" fitWidth="72.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="table" layoutX="-1.0" layoutY="115.0" prefHeight="177.0" prefWidth="634.0">
+         <columns>
+            <TableColumn fx:id="username2" prefWidth="75.0" text="doctor" />
+            <TableColumn fx:id="locatie" prefWidth="75.0" text="locatie" />
+            <TableColumn fx:id="dataProgramare" prefWidth="75.0" text="dataProgramare" />
+            <TableColumn fx:id="timpProgramare" prefWidth="75.0" text="timpProgramare" />
+            <TableColumn fx:id="pret" prefWidth="75.0" text="pret" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button fx:id="button" layoutX="693.0" layoutY="114.0" mnemonicParsing="false" onAction="#addProgramare" text="Adauga programarea" textFill="#864a98f5">
+         <font>
+            <Font name="Eras Medium ITC" size="12.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="comboBox" editable="true" layoutX="672.0" layoutY="204.0" prefHeight="25.0" prefWidth="175.0" promptText="Motivatie" />
+      <Button fx:id="button1" layoutX="690.0" layoutY="242.0" mnemonicParsing="false" onAction="#delete" text="Anuleaza programarea" textFill="#864a98f5">
+         <font>
+            <Font name="Eras Medium ITC" size="12.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="combo" layoutX="672.0" layoutY="17.0" prefHeight="25.0" prefWidth="175.0" promptText="Specializare" />
+      <DatePicker fx:id="date" layoutX="672.0" layoutY="48.0" />
+      <Label layoutX="529.0" layoutY="108.0" />
+      <TextField fx:id="ora" layoutX="672.0" layoutY="82.0" prefHeight="25.0" prefWidth="175.0" text="Ora hh:mm:ss" />
+      <Label fx:id="uuu" layoutX="677.0" layoutY="146.0" prefHeight="30.0" prefWidth="163.0" />
+      <Button fx:id="refreshButton" layoutX="14.0" layoutY="82.0" mnemonicParsing="false" onAction="#refreshMethod" text="Refresh" />
+      <Button fx:id="infoButton" layoutX="316.0" layoutY="18.0" mnemonicParsing="false" onAction="#fereastraNoua" prefHeight="25.0" prefWidth="199.0" text="Ai nevoie de informatii?" />
+      <Line endX="100.0" endY="219.33334350585938" layoutX="542.0" layoutY="73.0" startX="100.0" startY="-73.0" stroke="#764e8b" strokeWidth="2.0" />
+      <Line endX="126.0" endY="9.000015258789062" layoutX="734.0" layoutY="176.0" startX="-91.0" startY="9.000015258789062" stroke="#764e8b" strokeWidth="2.0" />
+   </children>
+</AnchorPane>

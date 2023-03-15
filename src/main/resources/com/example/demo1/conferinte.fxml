@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="343.0" prefWidth="402.0" style="-fx-background-color: #d5d0dd;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.ConferinteController">
+   <children>
+      <ImageView fitHeight="60.0" fitWidth="68.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img.png" />
+         </image>
+      </ImageView>
+      <Text fill="#54067b" layoutX="75.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Conferințe" wrappingWidth="116.82745361328125">
+         <font>
+            <Font name="Gabriola" size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="16.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12 Aprilie 2023 - Oncologie - doctor invitat Dan Suciu   ">
+         <font>
+            <Font name="Gabriola" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="16.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15 Decembrie 2023 - Dermatologie - doctor invitat Stephen Weys">
+         <font>
+            <Font name="Gabriola" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="16.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20 August 2023 - Cardiologie - doctor invitat Ivona Verne">
+         <font>
+            <Font name="Gabriola" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="16.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6 Neoiembrie  2023 - Pediatrie - doctor invitat Simona Margescu">
+         <font>
+            <Font name="Gabriola" size="18.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="122.0" fitWidth="207.0" layoutX="100.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img_11.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
