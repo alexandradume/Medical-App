@@ -60,8 +60,16 @@
       <TextField fx:id="ora" layoutX="672.0" layoutY="82.0" prefHeight="25.0" prefWidth="175.0" text="Ora hh:mm:ss" />
       <Label fx:id="uuu" layoutX="677.0" layoutY="146.0" prefHeight="30.0" prefWidth="163.0" />
       <Button fx:id="refreshButton" layoutX="14.0" layoutY="82.0" mnemonicParsing="false" onAction="#refreshMethod" text="Refresh" />
-      <Button fx:id="infoButton" layoutX="316.0" layoutY="18.0" mnemonicParsing="false" onAction="#fereastraNoua" prefHeight="25.0" prefWidth="199.0" text="Ai nevoie de informatii?" />
+      <Button fx:id="infoButton" layoutX="316.0" layoutY="18.0" mnemonicParsing="false" onAction="#fereastraNoua" prefHeight="25.0" prefWidth="199.0" text="Ai nevoie de informatii?" textFill="#864a98">
+         <font>
+            <Font name="Eras Medium ITC" size="12.0" />
+         </font></Button>
       <Line endX="100.0" endY="219.33334350585938" layoutX="542.0" layoutY="73.0" startX="100.0" startY="-73.0" stroke="#764e8b" strokeWidth="2.0" />
       <Line endX="126.0" endY="9.000015258789062" layoutX="734.0" layoutY="176.0" startX="-91.0" startY="9.000015258789062" stroke="#764e8b" strokeWidth="2.0" />
+      <Button fx:id="feedbackButton" layoutX="314.0" layoutY="50.0" mnemonicParsing="false" onAction="#feedback" prefHeight="25.0" prefWidth="199.0" text="Feedback" textFill="#864a98">
+         <font>
+            <Font name="Eras Medium ITC" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

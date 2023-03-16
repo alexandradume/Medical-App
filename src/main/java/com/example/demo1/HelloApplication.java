@@ -1,10 +1,7 @@
 package com.example.demo1;
 
 import com.example.demo1.controllers.HelloController;
-import com.example.demo1.repo.ClientDB;
-import com.example.demo1.repo.DateProgramariDB;
-import com.example.demo1.repo.DoctorDB;
-import com.example.demo1.repo.ProgramareDB;
+import com.example.demo1.repo.*;
 import com.example.demo1.service.Service;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -21,7 +18,7 @@ public class HelloApplication extends Application {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         HelloController controller = fxmlLoader.getController();
-        controller.setService(new Service(new ClientDB(), new DoctorDB(), new ProgramareDB(), new DateProgramariDB()));
+        controller.setService(new Service(new ClientDB(), new DoctorDB(), new ProgramareDB(), new DateProgramariDB(), new NotaDB()));
         stage.show();
     }
 

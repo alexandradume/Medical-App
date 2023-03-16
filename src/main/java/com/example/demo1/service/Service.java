@@ -1,10 +1,6 @@
 package com.example.demo1.service;
 
-import com.example.demo1.domain.Client;
-import com.example.demo1.domain.DateProgramari;
-import com.example.demo1.domain.Doctor;
-import com.example.demo1.domain.Programare;
-import com.example.demo1.repo.DateProgramariDB;
+import com.example.demo1.domain.*;
 import com.example.demo1.repo.Repository;
 
 import java.time.LocalDate;
@@ -20,15 +16,18 @@ public class Service {
 
     private final Repository<String, DateProgramari> dateProgramariRepository;
 
+    private final Repository<Integer, Nota> noteRepository;
 
 
 
-    public Service(Repository<String, Client> clientRepository, Repository<String, Doctor> doctoriRepository, Repository<Integer, Programare> programareRepository, Repository<String, DateProgramari> dateProgramariRepository) {
+
+    public Service(Repository<String, Client> clientRepository, Repository<String, Doctor> doctoriRepository, Repository<Integer, Programare> programareRepository, Repository<String, DateProgramari> dateProgramariRepository, Repository<Integer, Nota> noteRepository) {
         this.clientRepository = clientRepository;
 
         this.doctorRepository = doctoriRepository;
         this.programareRepository = programareRepository;
         this.dateProgramariRepository = dateProgramariRepository;
+        this.noteRepository = noteRepository;
     }
 
 
@@ -46,6 +45,11 @@ public class Service {
 
     public Iterable<Programare> getProgramari() {
         return programareRepository.findAll();
+    }
+
+
+    public Iterable<Nota> getNote() {
+        return noteRepository.findAll();
     }
 
 
@@ -149,6 +153,14 @@ public class Service {
                 maxim = programare.getId();
         return maxim+1;
     }
+
+    public int maximIdNote(){
+        int maxim = 0;
+        for(Nota nota: getNote())
+            if(nota.getId() > maxim)
+                maxim = nota.getId();
+        return maxim+1;
+    }
     public Programare removeProgramare(Integer id) {
         Integer programare = programareRepository.remove(id);
         return null;
@@ -168,5 +180,23 @@ public class Service {
         return true;
     }
 
+
+    public Double medie(){
+        int med = 0;
+        Iterable<Nota> note = noteRepository.findAll();
+        int numar = 0;
+        for(Nota nota: note){
+            med = med + nota.getValoare();
+            numar++;}
+        double m = med/numar;
+
+        return m;
+    }
+    public int addNota(Integer valoare, String descriere)  {
+
+        Nota nota = new Nota (maximIdNote(), valoare, descriere);
+        noteRepository.save(nota);
+        return 0;
+    }
 
 }

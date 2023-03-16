@@ -1,7 +1,9 @@
 package com.example.demo1.controllers;
 
+import com.example.demo1.FeedbackController;
 import com.example.demo1.HelloApplication;
 import com.example.demo1.domain.Programare;
+import com.example.demo1.repo.*;
 import com.example.demo1.service.Service;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -121,6 +123,17 @@ public class ClientController {
         //controller.setService(new Service(new ClientDB(), new DoctorDB(), new ProgramareDB(), new DateProgramariDB()), username);
         stage.show();
     }
+
+    public void feedback(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("feedback.fxml"));
+        Scene scene1 = new Scene(fxmlLoader.load(), 250, 250);
+        Stage stage = new Stage();
+        stage.setTitle("Home!");
+        stage.setScene(scene1);
+        FeedbackController controller = fxmlLoader.getController();
+        controller.setService(new Service(new ClientDB(), new DoctorDB(), new ProgramareDB(), new DateProgramariDB(), new NotaDB()));
+        stage.show();}
+
 }
 
 

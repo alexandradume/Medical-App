@@ -43,12 +43,9 @@ public class ClientSignInController {
         System.out.println(city);
         System.out.println(password);*/
         int truth = service.addClient(username,password,name,city);
-        if(truth == 0)
-            label.setText("Successful sign up");
         if(truth == -1)
-            label.setText("Some fields are empty");
-        if(truth == 1)
-            label.setText("This username is already used");
+            label.setText("Exista campuri goale");
+
 
     }
 }

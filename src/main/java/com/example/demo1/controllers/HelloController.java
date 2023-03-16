@@ -1,10 +1,7 @@
 package com.example.demo1.controllers;
 
 import com.example.demo1.HelloApplication;
-import com.example.demo1.repo.ClientDB;
-import com.example.demo1.repo.DateProgramariDB;
-import com.example.demo1.repo.DoctorDB;
-import com.example.demo1.repo.ProgramareDB;
+import com.example.demo1.repo.*;
 import com.example.demo1.service.Service;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -47,7 +44,7 @@ public class HelloController {
         stage.setTitle("SignIn!");
         stage.setScene(scene);
         SignInController controller = fxmlLoader.getController();
-        controller.setService(new Service(new ClientDB(), new DoctorDB(), new ProgramareDB(), new DateProgramariDB()));
+        controller.setService(new Service(new ClientDB(), new DoctorDB(), new ProgramareDB(), new DateProgramariDB(), new NotaDB()));
         stage.show();
     }
 
@@ -69,7 +66,7 @@ public class HelloController {
                 stage.setTitle("Home!");
                 stage.setScene(scene);
                 DoctorController controller = fxmlLoader.getController();
-                controller.setService(new Service(new ClientDB(), new DoctorDB(), new ProgramareDB(), new DateProgramariDB()), username);
+                controller.setService(new Service(new ClientDB(), new DoctorDB(), new ProgramareDB(), new DateProgramariDB(), new NotaDB()), username);
                 stage.show();
             }
             else{
@@ -86,7 +83,7 @@ public class HelloController {
                 stage.setTitle("Home!");
                 stage.setScene(scene);
                 ClientController controller = fxmlLoader.getController();
-                controller.setService(new Service(new ClientDB(), new DoctorDB(), new ProgramareDB(), new DateProgramariDB()), username);
+                controller.setService(new Service(new ClientDB(), new DoctorDB(), new ProgramareDB(), new DateProgramariDB(), new NotaDB()), username);
                 stage.show();}
             else{
                 label.setText("Datele nu sunt corecte!");

@@ -48,12 +48,10 @@ public class DoctorSignInController {
         System.out.println(password);
         System.out.println(speciality);
         int truth = service.addDoctor(username,password,name,city,speciality);
-        if(truth == 0)
-            label.setText("Successful sign up");
         if(truth == -1)
-            label.setText("Some fields are empty");
-        if(truth == 1)
-            label.setText("This username is already used");
+            label.setText("Exista campuri goale");
+
+
 
     }
 }
